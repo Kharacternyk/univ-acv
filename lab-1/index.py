@@ -1,5 +1,4 @@
 import clip
-from sklearn.cluster import HDBSCAN
 from torch import (
     arange,
     cat,
@@ -12,7 +11,6 @@ from torch import (
     save,
     split,
 )
-from torchcodec.decoders import VideoDecoder
 from torchvision.datasets import DatasetFolder
 from torchvision.transforms.v2 import (
     CenterCrop,
@@ -29,6 +27,9 @@ device = "cuda" if cuda.is_available() else "cpu"
 model, pil_preprocess = clip.load("ViT-B/32", device=device)
 
 if __name__ == "__main__":
+    from sklearn.cluster import HDBSCAN
+    from torchcodec.decoders import VideoDecoder
+
     resolution = pil_preprocess.transforms[0].size
     tensor_preprocess = Compose(
         [

@@ -45,7 +45,10 @@ with container(horizontal=True):
 
 @cache_resource
 def load_index():
-    return load("index.pt")
+    try:
+        return load("index.pt")
+    except:
+        return load("/assets/index.pt")
 
 
 embeddings, bins, ids, titles = load_index()
