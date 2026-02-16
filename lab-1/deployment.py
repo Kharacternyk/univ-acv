@@ -24,7 +24,7 @@ app = modal.App("minuscoogle", image=image)
 
 @app.function(
     volumes={"/assets": modal.Volume.from_name("minuscoogle")},
-    scaledown_window=600,
+    scaledown_window=1200,
     env=dict(PYTHONPATH="/app"),
 )
 @modal.concurrent(max_inputs=16)
