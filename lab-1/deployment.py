@@ -29,7 +29,7 @@ app = modal.App("minuscoogle", image=image)
 )
 @modal.concurrent(max_inputs=16)
 @modal.web_server(8000)
-def run():
+def serve():
     Popen(
         [
             "streamlit",
