@@ -25,6 +25,7 @@ query = text_input(
 
 with container(horizontal=True):
     for example_text in [
+        "racing",
         "a yellow toy car",
         "a pink balloon",
         "a rotten apple hanging on a tree branch",
