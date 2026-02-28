@@ -1,5 +1,7 @@
 ### Data preparation
 
+Register at https://www.cityscapes-dataset.com/register/
+
 ```bash
 uvx --from cityscapesscripts csDownload leftImg8bit_trainvaltest.zip gtFine_trainvaltest.zip
 unzip gtFine_trainvaltest.zip
